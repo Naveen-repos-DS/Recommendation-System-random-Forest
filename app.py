@@ -47,7 +47,7 @@ global_mean = pickle.load(
 # Computation of Similar matrix and User item
 # --------------------------------------------
 
-user_item = df_final.pivot_table(index = 'user_id', columns = 'prod_id', values = 'rating')
+user_item = df_final.pivot_table(index = 'user_id', columns = 'prod_id', values = 'rating',fill_value=0)
 
 from sklearn.metrics.pairwise import cosine_similarity
 
