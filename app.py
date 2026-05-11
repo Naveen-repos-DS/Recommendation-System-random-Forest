@@ -6,7 +6,7 @@ import pickle
 # Load files
 # ---------------------------------
 
-rf_recommender = pickle.load(open("model.pkl", "rb"))
+rf_recommender = joblib.load("model.pkl")
 
 #similar_matrix = pickle.load(
 #    open("similar_matrix.pkl", "rb")
